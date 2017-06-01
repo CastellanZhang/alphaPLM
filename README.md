@@ -5,9 +5,9 @@
 * LS-PLM据说是之前阿里广告主要的ctr预估模型，具体算法原理见盖坤大神最近放出的论文: Learning Piece-wise Linear Models from Large Scale Data for Ad Click Prediction<br>
 
 
-* 此代码基于之前的alphaFM修改实现，且正赶上alphaGo再次完虐人类，便仍然冠以alpha前缀。<br>
+* 此代码基于之前的[alphaFM](https://github.com/CastellanZhang/alphaFM)修改实现，且正赶上alphaGo再次完虐人类，便仍然冠以alpha前缀。<br>
 
-* 安装方法和使用方法跟alphaFM非常类似，不再详述。<br>
+* 安装方法和使用方法跟[alphaFM](https://github.com/CastellanZhang/alphaFM)非常类似，不再详述。<br>
 
 ## 模型文件格式（假定分片数为f）：
 第一行是bias的参数：<br>

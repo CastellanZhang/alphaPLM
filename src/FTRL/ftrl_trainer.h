@@ -9,9 +9,11 @@
 
 struct trainer_option
 {
-    trainer_option() : u_bias(true), w_bias(true), piece_num(4), u_mean(0.0), u_stdev(0.1), w_mean(0.0), w_stdev(0.1), u_alpha(0.05), u_beta(1.0), u_l1(0.1), u_l2(5.0),
-               w_alpha(0.05), w_beta(1.0), w_l1(0.1), w_l2(5.0),
-               threads_num(1), b_init(false) {}
+    trainer_option() : u_bias(true), w_bias(true), piece_num(4),
+        u_mean(0.0), u_stdev(0.1), w_mean(0.0), w_stdev(0.1),
+        u_alpha(0.05), u_beta(1.0), u_l1(0.1), u_l2(5.0),
+        w_alpha(0.05), w_beta(1.0), w_l1(0.1), w_l2(5.0),
+        threads_num(1), b_init(false) {}
     string model_path, init_m_path;
     double u_mean, u_stdev, w_mean, w_stdev;
     double u_alpha, u_beta, u_l1, u_l2;
@@ -252,7 +254,7 @@ void ftrl_trainer::train(int y, const vector<pair<string, double> >& x)
                 double& wif = mu.w[f];
                 double& w_nif = mu.w_n[f];
                 double& w_zif = mu.w_z[f];
-                double w_gif = -y * xi * uTx[f] * wTx[f] * (1.0-wTx[f]) / denominator2;
+                double w_gif = -y * xi * uTx[f] * wTx[f] * (1.0 - wTx[f]) / denominator2;
                 double w_sif = 1 / w_alpha * (sqrt(w_nif + w_gif * w_gif) - sqrt(w_nif));
                 w_zif += w_gif - w_sif * wif;
                 w_nif += w_gif * w_gif;

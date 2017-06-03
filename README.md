@@ -2,7 +2,7 @@
 ## 前言：
 * alphaPLM是Large Scale Piece-wise Linear Model(LS-PLM)的一个单机多线程版本实现，用于解决二分类问题，比如CTR预估，优化算法采用了FTRL。<br>
 
-* LS-PLM据说是之前阿里广告主要的ctr预估模型，具体算法原理见盖坤大神最近放出的论文: Learning Piece-wise Linear Models from Large Scale Data for Ad Click Prediction<br>
+* LS-PLM据说是之前阿里广告主要的ctr预估模型，具体算法原理见盖坤大神最近放出的论文: Learning Piece-wise Linear Models from Large Scale Data for Ad Click Prediction，代码实现所用优化方法见我的博客文章：http://castellanzhang.github.io/2017/06/01/mlr_plm/<br>
 
 
 * 此代码基于之前的[alphaFM](https://github.com/CastellanZhang/alphaFM)修改实现，且正赶上alphaGo再次完虐人类，便仍然冠以alpha前缀。<br>
